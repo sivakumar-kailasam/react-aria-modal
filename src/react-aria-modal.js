@@ -1,7 +1,7 @@
-const React = require('react');
-const FocusTrap = require('focus-trap-react');
-const displace = require('react-displace');
-const noScroll = require('no-scroll');
+import React  from 'react';
+import FocusTrap  from 'focus-trap-react';
+import displace  from 'react-displace';
+import noScroll  from 'no-scroll';
 
 class Modal extends React.Component {
   static defaultProps = {
@@ -229,4 +229,4 @@ DisplacedModal.renderTo = function(input) {
   return displace(Modal, { renderTo: input });
 };
 
-module.exports = DisplacedModal;
+export default DisplacedModal;

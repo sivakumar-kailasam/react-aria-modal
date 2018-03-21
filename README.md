@@ -1,3 +1,5 @@
+# NOTE: This repo is for a demo, don't use this!
+
 # react-aria-modal
 
 A fully accessible and flexible React modal built according [WAI-ARIA Authoring Practices](http://www.w3.org/TR/wai-aria-practices/#dialog_modal).

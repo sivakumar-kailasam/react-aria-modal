@@ -1,6 +1,6 @@
 {
-  "name": "react-aria-modal",
-  "version": "2.12.1",
+  "name": "@sivakumar-kailasam/react-aria-modal",
+  "version": "999.1000.1001",
   "description": "A fully accessible and flexible React modal built according WAI-ARIA Authoring Practices",
   "main": "dist/react-aria-modal.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "format": "prettier --single-quote --write src/*.js test/*.js demo/js/*.js",
     "demo-bundle": "browserify demo/js -t babelify -o demo/demo-bundle.js",
     "start": "budo demo/js/index.js:demo-bundle.js --live --dir demo -- -t babelify -o demo/demo-bundle.js",
-    "build": "babel src -d dist",
+    "build": "rollup -c",
     "prepublish": "npm run build",
     "test": "npm run lint"
   },
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/davidtheclark/react-aria-modal#readme",
   "dependencies": {
+    "babel-preset-es2015": "6.24.1",
     "focus-trap-react": "^3.0.4",
     "no-scroll": "^2.0.0",
     "react-displace": "^2.3.0"
@@ -50,15 +51,10 @@
     "eslint": "^4.8.0",
     "prettier": "^1.2.2",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
-  "babel": {
-    "presets": [
-      "react",
-      "env"
-    ],
-    "plugins": [
-      "transform-class-properties"
-    ]
+    "react-dom": "^16.0.0",
+    "rollup": "0.57.1",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-commonjs": "9.1.0",
+    "rollup-plugin-node-resolve": "3.3.0"
   }
 }
